@@ -1,0 +1,86 @@
+
+{
+  "intro": "Transform your financial firm with our bespoke solutions. We combine cutting-edge technology with deep industry expertise to deliver a suite of services that streamline your operations and drive growth.",
+  "fundsServices": {
+    "title": "CLIENT FOCUS",
+    "description": "At DataAlpha, we partner with leading investment managers across asset classes — from hedge funds and private equity to real estate, credit, and digital assets — to unlock performance through data, technology, and insight. Our tailored solutions integrate advanced analytics, AI-driven modeling, and real-time data pipelines to transform how funds trade, invest, and operate. Whether it’s enhancing alpha generation for hedge funds, delivering predictive borrower intelligence for private credit, optimizing structured credit workflows, enabling smarter deal execution for private equity, or bringing institutional-grade infrastructure to crypto funds, we help clients modernize decision-making, strengthen risk control, and accelerate growth across their portfolios.",
+    "items": [
+      {
+        "icon": "hedge-fund",
+        "title": "Hedge Funds",
+        "description": "We help hedge funds unlock alpha by embedding advanced analytics, real-time data pipelines, and AI-driven insights into trading, risk, and operational processes — enhancing performance and control across strategies."
+      },
+      {
+        "icon": "private-credit",
+        "title": "Private Credit",
+        "description": "Our solutions give private credit managers deeper borrower intelligence, streamlined deal workflows, and predictive risk models to accelerate underwriting and strengthen portfolio monitoring."
+      },
+      {
+        "icon": "structured-credit",
+        "title": "Structured Credit",
+        "description": "We bring extensive experience in secondary credit markets. We understand the complexities of structured credit products, guiding clients through origination, analysis, and execution of CLOs, CDOs, ABS, MBS and other securitized instruments to capture attractive risk-adjusted returns."
+      },
+      {
+        "icon": "real-estate",
+        "title": "Real Estate Funds",
+        "description": "Our platforms centralize property, market, and financial data, providing real-time dashboards and forecasting models to support acquisition, valuation, and portfolio optimization."
+      },
+      {
+        "icon": "private-equity",
+        "title": "Private Equity",
+        "description": "We equip private equity firms with end-to-end data strategies, from deal sourcing to exit, enabling smarter investment decisions, operational improvements, and faster value creation."
+      },
+      {
+        "icon": "crypto-funds",
+        "title": "Crypto Funds",
+        "description": "We empower crypto fund managers with institutional-grade infrastructure, real-time blockchain data integration, and advanced analytics across trading, custody, and risk management. Our solutions provide on-chain intelligence, portfolio attribution, and automated compliance monitoring."
+      },
+      {
+        "icon": "insurance",
+        "title": "Insurance Funds",
+        "description": "We modernize insurance investment operations with integrated data platforms, automated reporting, and risk analytics, enabling faster, more accurate asset allocation and compliance."
+      },
+      {
+        "icon": "commodities",
+        "title": "Commodities",
+        "description": "Our specialists advise on commodity markets ranging from energy to metals and agriculture, supporting clients with market intelligence, risk assessment, and execution strategies tailored to their objectives."
+      },
+      {
+        "icon": "family-offices",
+        "title": "Family Offices",
+        "description": "Our spreadsheets on the web solution provide a standardized data solution to family offices and fund of funds to perform allocation across funds, investment research, integrates with the market data sources, helps in the budgeting and planning."
+      }
+    ]
+  },
+  "techServices": {
+    "title": "Tech Services",
+    "description": "From robust data management and advanced AI to precise quantitative tools and integrated finance applications, we provide everything you need to build a resilient, high-performing enterprise.",
+    "items": [
+      {
+        "icon": "data-service",
+        "title": "DATA",
+        "description": "In today's fast-paced financial world, having a robust data infrastructure isn't just a luxury—it's a necessity. Our enterprise data solutions are designed to be scalable, high-performing, and resilient, ensuring your firm has a single source of truth for all critical information. We build modern data warehouses that integrate seamlessly with your existing systems, managing everything from security masters and market data to comprehensive client data. Our approach leverages cutting-edge technology and best practices to provide the clean, reliable data you need to drive smarter decisions and stay ahead of the competition."
+      },
+      {
+        "icon": "ai-service",
+        "title": "AI",
+        "description": "Ready to unlock the power of artificial intelligence? We can help you become AI-ready by building specialized solutions tailored to your unique needs. Our expertise lies in leveraging the latest advancements in AI, including sophisticated Large Language Models (LLMs). We use techniques like prompt engineering, model fine-tuning, and RAG (Retrieval-Augmented Generation) to create applications that can automate complex tasks, generate insightful reports, and provide intelligent support across your organization. Let us help you transform your operations with the power of AI."
+      },
+      {
+        "icon": "quant-service",
+        "title": "QUANT",
+        "description": "Gain a competitive edge with our bespoke quant solutions. We understand that one size doesn't fit all, which is why we offer boutique and highly efficient tools designed to perfectly match your firm's specific requirements. Our offerings include powerful applications for portfolio optimization, rigorous back-testing, and meticulous asset screening. We also provide solutions for sophisticated risk management and complex derivative valuation, giving you the precise tools you need to make informed investment decisions and manage your strategies with confidence."
+      },
+      {
+        "icon": "finance-apps-service",
+        "title": "FINANCE APPLICATIONS",
+        "description": "Transform your entire financial workflow with our comprehensive suite of finance applications. We offer end-to-end solutions that cover the full lifecycle of your operations, from the front office all the way to the back office. Our applications streamline critical processes like pre-trade compliance, real-time trade-time quoting, and efficient booking workflows. Once a trade is executed, our solutions manage the entire post-trade lifecycle, including reporting and more. We help you create a seamless, integrated environment that boosts efficiency and reduces operational friction."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Operations?",
+    "subtitle": "Let's discuss how DataAlpha can tailor a solution to fit your unique needs.",
+    "buttonText": "Book a Demo"
+  }
+}

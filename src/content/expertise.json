@@ -1,0 +1,84 @@
+[
+  {
+    "category": "markets",
+    "title": "Hedge Funds"
+  },
+  {
+    "category": "markets",
+    "title": "Private Credit"
+  },
+  {
+    "category": "markets",
+    "title": "Structured Credit"
+  },
+  {
+    "category": "markets",
+    "title": "Real Estate Funds"
+  },
+  {
+    "category": "markets",
+    "title": "Private Equity"
+  },
+  {
+    "category": "markets",
+    "title": "Crypto Funds"
+  },
+  {
+    "category": "markets",
+    "title": "Insurance Funds"
+  },
+  {
+    "category": "markets",
+    "title": "Commodities"
+  },
+  {
+    "category": "products",
+    "title": "Secondary Credit",
+    "description": "We bring extensive experience in secondary credit markets, helping clients source, evaluate, and execute opportunities across distressed, special situations, and off-the-run credits to optimize returns and manage risk."
+  },
+  {
+    "category": "products",
+    "title": "Direct Lending",
+    "description": "Our team has a proven record in direct lending, structuring and managing bespoke financing solutions for middle-market and large borrowers while balancing yield, covenant protection, and long-term value creation."
+  },
+  {
+    "category": "products",
+    "title": "High Yield",
+    "description": "With deep insight into the high-yield bond market, we support clients in credit selection, relative-value strategies, and portfolio construction to navigate volatility and capitalize on market dislocations."
+  },
+  {
+    "category": "products",
+    "title": "Equity",
+    "description": "Our equity expertise spans public and private markets, helping clients identify growth opportunities, assess valuation drivers, and implement disciplined strategies to build enduring equity portfolios."
+  },
+  {
+    "category": "products",
+    "title": "Derivatives",
+    "description": "We offer seasoned guidance on derivative instruments across asset classes, from plain-vanilla options to complex structures, enabling clients to hedge exposures, enhance yield, or express tactical views."
+  },
+  {
+    "category": "products",
+    "title": "Structured Notes",
+    "description": "We have deep knowledge of designing, pricing, and managing structured notes that align with investors’ risk profiles and market outlooks, balancing innovation with prudent risk management."
+  },
+  {
+    "category": "products",
+    "title": "ABS & MBS",
+    "description": "Our team excels in analyzing and managing asset-backed and mortgage-backed securities, evaluating collateral quality, deal structure, and performance metrics to deliver consistent returns."
+  },
+  {
+    "category": "products",
+    "title": "REITs",
+    "description": "We provide comprehensive insights into real estate investment trusts, helping clients assess property portfolios, market trends, and income potential to build resilient real estate exposure."
+  },
+  {
+    "category": "products",
+    "title": "Swaps",
+    "description": "We guide clients through the use of interest rate, currency, and credit default swaps, structuring transactions that support hedging objectives and enhance portfolio efficiency."
+  },
+  {
+    "category": "products",
+    "title": "Annuities",
+    "description": "We bring nuanced understanding of annuity products, from fixed to variable and indexed offerings, assisting clients with product selection, risk evaluation, and integration into broader investment strategies."
+  }
+]

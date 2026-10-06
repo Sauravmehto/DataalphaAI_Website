@@ -1,0 +1,103 @@
+
+[
+  {
+    "office": "Front Office",
+    "title": "Order Management",
+    "description": "Our platform provides a single source for managing trade orders, ensuring rapid and compliant execution. From capturing orders to pre-trade compliance checks, we streamline the entire process, minimizing errors and maximizing efficiency."
+  },
+  {
+    "office": "Front Office",
+    "title": "Deal Screening",
+    "description": "We help you identify and vet new opportunities with powerful due diligence and valuation tools. Our system automates the screening process, allowing your team to focus on high-potential deals, accelerate proposals, and secure funding faster."
+  },
+  {
+    "office": "Front Office",
+    "title": "Portfolio Management",
+    "description": "Gain a competitive edge with our dynamic portfolio management solutions. We offer real-time monitoring, strategic asset allocation, and rebalancing tools to optimize performance and track live P&L, helping you stay ahead of market shifts."
+  },
+  {
+    "office": "Front Office",
+    "title": "Asset Selection",
+    "description": "Drive smarter investment decisions with our robust research and analytics. Our tools support portfolio optimization and provide detailed performance tracking, empowering you to make data-driven choices and approve investments with confidence."
+  },
+  {
+    "office": "Front Office",
+    "title": "Client Relationship Management",
+    "description": "Build and maintain strong client relationships with our integrated platform. From managing investor pipelines to executing targeted campaigns and handling correspondence, we ensure a seamless and professional client experience from onboarding onward."
+  },
+  {
+    "office": "Middle Office",
+    "title": "Trade Settlement",
+    "description": "Our system simplifies the complex process of trade settlement. It automates confirmations, manages investment terms, and handles fee allocations, ensuring accuracy and reducing the time and resources needed to finalize transactions."
+  },
+  {
+    "office": "Middle Office",
+    "title": "Reconciliation",
+    "description": "We eliminate operational risk by providing a comprehensive reconciliation engine. Our tools perform automated checks on positions, cash, and transactions, integrating with TPA and custodial systems to ensure all data is consistent and accurate."
+  },
+  {
+    "office": "Middle Office",
+    "title": "Cash Management",
+    "description": "Optimize your firm's liquidity and financial health with our cash management tools. We provide a clear view of daily cash flows, offer precise ladder forecasts, and help you manage margin and collateral effectively."
+  },
+  {
+    "office": "Middle Office",
+    "title": "Risk Management",
+    "description": "Proactively protect your firm from market, trading, and counterparty risks. Our system calculates key metrics like VaR and provides a firm-wide view of risk exposure, enabling timely and informed risk mitigation strategies."
+  },
+  {
+    "office": "Middle Office",
+    "title": "Fund Compliance",
+    "description": "Stay compliant in a complex regulatory landscape. We monitor against restricted lists, calculate compliance requirements, and track fund limits, ensuring all operations adhere to regulatory and SEC standards with minimal manual effort."
+  },
+  {
+    "office": "Back Office",
+    "title": "Market Data",
+    "description": "Our platform centralizes market data integration, providing a single, reliable source for everything from pricing liquidity to rates and curves. This ensures that all valuation models and decisions are based on the most accurate, up-to-the-minute information."
+  },
+  {
+    "office": "Back Office",
+    "title": "Asset Servicing",
+    "description": "Automate the administrative burdens of asset management. Our tools handle corporate actions, process income, and service OTC derivatives, freeing up your team to focus on higher-value tasks."
+  },
+  {
+    "office": "Back Office",
+    "title": "Portfolio Control",
+    "description": "Maintain full control over your portfolio's integrity. We provide official NAV and P&L calculations, manage AUM, and streamline reconciliation processes, ensuring all financial data is verifiable and accurate for audits and reporting."
+  },
+  {
+    "office": "Back Office",
+    "title": "Data Governance",
+    "description": "Ensure the integrity and security of your core data. Our system provides a centralized repository for security masters and counterparty data, establishing a single source of truth for all legal and account information."
+  },
+  {
+    "office": "Back Office",
+    "title": "Treasury",
+    "description": "Our treasury function supports strategic financial management. From allocating money market funds and hedging FX balances to planning for financing and short positions, we provide the tools to manage your firm's capital effectively."
+  },
+  {
+    "office": "Back Office",
+    "title": "Portfolio Accounting",
+    "description": "This function is the backbone of your firm's financial operations. We capture every transaction, maintain trial balances, and perform daily pricing, ensuring accurate and transparent accounting for tax lots and all holdings."
+  },
+  {
+    "office": "Back Office",
+    "title": "Performance Attribution",
+    "description": "Go beyond simple returns to understand what drives your performance. Our analytics provide detailed performance attribution, including Brinson model calculations, to help you identify the true sources of alpha and underperformance."
+  },
+  {
+    "office": "Back Office",
+    "title": "Corp/Tax Accounting",
+    "description": "We simplify corporate financial management and tax compliance. Our system automates expense allocation, manages payables and receivables, and assists with tax forms, ensuring your corporate books are always organized and ready."
+  },
+  {
+    "office": "Back Office",
+    "title": "Partner Accounting",
+    "description": "Streamline the complex process of investor and partner compensation. We automate investor allocation, management fee calculations, and incentive fee calculations, providing transparency and accuracy in all partner-related financial activities."
+  },
+  {
+    "office": "Back Office",
+    "title": "Investor Reporting",
+    "description": "Deliver clear, comprehensive reports to your investors effortlessly. Our platform automates the creation of reports detailing investment breakdowns, NAV, and performance, ensuring your investors are always well-informed."
+  }
+]

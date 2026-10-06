@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "DataAlpha is a Boutique Financial Technology Consulting Company",
+    "subtitle": "Partnering with the World’s premier asset managers to transform their operational and technology platforms.",
+    "cta": {
+      "primary": "Explore Solutions",
+      "secondary": "Book a Demo"
+    }
+  },
+  "solutionsSection": {
+    "tag": "Our Solutions",
+    "title": "Intelligent Financial Operations",
+    "subtitle": "Streamline your workflows, enhance accuracy, and drive growth with our suite of AI-powered solutions."
+  },
+  "whoWeServe": {
+    "title": "Who We Serve",
+    "subtitle": "We provide specialized solutions for a wide range of financial market participants and products."
+  },
+  "technologyServices": {
+    "title": "Technology Services",
+    "services": [
+      {
+        "icon": "DatabaseZap",
+        "title": "DATA",
+        "description": "Scalable, performant and resilient enterprise data and intelligence solutions for data warehousing, security master, market data, client data and more leveraging modern technology and principles."
+      },
+      {
+        "icon": "BrainCircuit",
+        "title": "AI",
+        "description": "Make enterprise Al-ready by building specialized Al solutions leveraging cutting-edge LLM models, prompt engineering, fine-tuning, RAG and other Al models and techniques."
+      },
+      {
+        "icon": "Calculator",
+        "title": "QUANT",
+        "description": "Boutique and efficient quant solutions that tailor fit your needs including tools for portfolio optimization, back-testing, asset screening, risk management, derivative valuation and more."
+      },
+      {
+        "icon": "AppWindow",
+        "title": "FINANCE APPLICATIONS",
+        "description": "Front to back office financial application and workflow transformation from pre-trade compliances to trade-time quoting, booking workflows to post-trade lifecycle, reporting and so much more."
+      }
+    ]
+  },
+  "whyDataAlpha": {
+    "tag": "Why DataAlpha?",
+    "title": "The Future of Financial Operations, Today.",
+    "subtitle": "Our platform is built on a foundation of cutting-edge technology and deep industry expertise, delivering unparalleled performance and reliability.",
+    "features": [
+      {
+        "icon": "award",
+        "title": "Best-in-class Experience",
+        "description": "Decades of professional experience with front, middle and back-office operations at the world's biggest banks and funds"
+      },
+      {
+        "icon": "brainCircuit",
+        "title": "Niche Expertise",
+        "description": "Decades of hands-on expertise building cutting edge financial data, Al, quant and AppDev solutions"
+      },
+      {
+        "icon": "server",
+        "title": "Modern Technology",
+        "description": "Leverage modern technology principles and stack to build technological moat for the next decade"
+      },
+      {
+        "icon": "users",
+        "title": "Progressive Team & Values",
+        "description": "High quality motivated team powered by a value-based professional culture"
+      },
+      {
+        "icon": "badgeCheck",
+        "title": "Honest Advisory",
+        "description": "Advisory that you can trust; buy vs build based on what works best for you"
+      },
+      {
+        "icon": "gem",
+        "title": "Boutique Solutions",
+        "description": "Handcrafted strategic solutions delivered in an agile fashion"
+      }
+    ],
+    "image": {
+      "src": "/why-dataalpha.png",
+      "alt": "Why DataAlpha",
+      "dataAiHint": "operations"
+    }
+  },
+  "clients": {
+    "title": "Trusted by Leading Financial Institutions",
+    "subtitle": "We partner with innovative firms to transform their Front, Mid & Back-office operations.",
+    "logos": [],
+    "cta": {
+      "text": "",
+      "href": ""
+    }
+  }
+}
