@@ -3,74 +3,29 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import { SOLUTIONS_MENU, type SolutionsMenuItem } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const isSolutionsPath = (pathname: string | null) =>
   Boolean(pathname?.startsWith("/solutions"));
 
-function MenuItemContent({
+// Renders an internal link, external link, or inert block depending on the item.
+function ItemLink({
   item,
-  compact = false,
-}: {
-  item: SolutionsMenuItem;
-  compact?: boolean;
-}) {
-  const Icon = item.icon;
-  return (
-    <>
-      <span
-        className={cn(
-          "flex shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary",
-          compact ? "h-8 w-8" : "h-9 w-9"
-        )}
-      >
-        <Icon className="h-4 w-4" />
-      </span>
-      <span className="min-w-0 flex-1">
-        <span className="flex items-center gap-1.5 text-sm font-medium text-foreground">
-          {item.label}
-          {item.external && (
-            <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-colors group-hover:text-primary" />
-          )}
-          {item.comingSoon && (
-            <span className="rounded-full border border-primary/30 px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-primary">
-              Soon
-            </span>
-          )}
-        </span>
-        {!compact && (
-          <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
-            {item.description}
-          </span>
-        )}
-      </span>
-    </>
-  );
-}
-
-function MenuItem({
-  item,
-  compact,
+  className,
   onSelect,
+  children,
 }: {
   item: SolutionsMenuItem;
-  compact?: boolean;
+  className: string;
   onSelect?: () => void;
+  children: React.ReactNode;
 }) {
-  const className = cn(
-    "group flex items-start gap-3 rounded-lg transition-colors",
-    compact ? "items-center px-2 py-2" : "p-3",
-    item.comingSoon
-      ? "cursor-default opacity-70"
-      : "hover:bg-muted focus-visible:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-  );
-
   if (item.comingSoon || !item.href) {
     return (
       <div className={className} aria-disabled="true">
-        <MenuItemContent item={item} compact={compact} />
+        {children}
       </div>
     );
   }
@@ -84,15 +39,96 @@ function MenuItem({
         className={className}
         onClick={onSelect}
       >
-        <MenuItemContent item={item} compact={compact} />
+        {children}
       </a>
     );
   }
 
   return (
     <Link href={item.href} className={className} onClick={onSelect}>
-      <MenuItemContent item={item} compact={compact} />
+      {children}
     </Link>
+  );
+}
+
+function ItemIcon({ item, size }: { item: SolutionsMenuItem; size: "sm" | "lg" }) {
+  const Icon = item.icon;
+  return (
+    <span
+      className={cn(
+        "flex shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors",
+        size === "lg" ? "h-10 w-10" : "h-8 w-8",
+        !item.comingSoon && "group-hover:bg-primary group-hover:text-primary-foreground"
+      )}
+    >
+      <Icon className={size === "lg" ? "h-5 w-5" : "h-4 w-4"} />
+    </span>
+  );
+}
+
+function SoonBadge() {
+  return (
+    <span className="rounded-full border border-primary/30 bg-primary/5 px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-primary">
+      Soon
+    </span>
+  );
+}
+
+function ItemAction({ item }: { item: SolutionsMenuItem }) {
+  if (item.comingSoon) {
+    return (
+      <span className="text-xs font-medium text-muted-foreground">
+        {item.actionLabel}
+      </span>
+    );
+  }
+
+  const Arrow = item.external ? ArrowUpRight : ArrowRight;
+  return (
+    <span className="inline-flex items-center gap-1 text-xs font-medium text-primary">
+      {item.actionLabel}
+      <Arrow
+        className={cn(
+          "h-3.5 w-3.5 transition-transform",
+          item.external
+            ? "group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            : "group-hover:translate-x-0.5"
+        )}
+      />
+    </span>
+  );
+}
+
+function SolutionCard({
+  item,
+  onSelect,
+}: {
+  item: SolutionsMenuItem;
+  onSelect?: () => void;
+}) {
+  return (
+    <ItemLink
+      item={item}
+      onSelect={onSelect}
+      className={cn(
+        "group flex h-full flex-col rounded-lg border border-transparent p-4 transition-colors",
+        item.comingSoon
+          ? "cursor-default"
+          : "hover:border-border hover:bg-muted/60 focus-visible:border-border focus-visible:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      )}
+    >
+      <ItemIcon item={item} size="lg" />
+      <span className="mt-4 flex items-center gap-2 text-sm font-semibold leading-snug text-foreground">
+        {item.label}
+        {item.comingSoon && <SoonBadge />}
+      </span>
+      <span className="mt-1.5 flex-1 text-xs leading-relaxed text-muted-foreground">
+        {item.description}
+      </span>
+      <span className="mt-4">
+        <ItemAction item={item} />
+      </span>
+    </ItemLink>
   );
 }
 
@@ -114,6 +150,7 @@ export function SolutionsDropdown() {
     cancelClose();
     closeTimer.current = window.setTimeout(() => setIsOpen(false), 150);
   };
+  const close = () => setIsOpen(false);
 
   useEffect(() => {
     setIsOpen(false);
@@ -179,23 +216,39 @@ export function SolutionsDropdown() {
       </button>
 
       {isOpen && (
-        // pt-3 keeps a hover bridge between the trigger and the panel.
+        // pt-4 keeps a hover bridge between the trigger and the panel.
         <div
           id={panelId}
-          className="absolute left-1/2 top-full z-50 w-[22rem] -translate-x-1/2 pt-3"
+          className="absolute left-1/2 top-full z-50 w-[min(44rem,calc(100vw-2rem))] -translate-x-1/2 pt-4"
         >
-          <div className="rounded-xl border bg-popover p-2 text-popover-foreground shadow-xl shadow-primary/10 animate-in fade-in-0 zoom-in-95 slide-in-from-top-1 duration-150">
-            <p className="px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-              Our Solutions
-            </p>
-            <div className="flex flex-col gap-0.5">
+          <div className="overflow-hidden rounded-xl border bg-popover text-popover-foreground shadow-2xl shadow-primary/10 animate-in fade-in-0 zoom-in-95 slide-in-from-top-1 duration-150">
+            <div className="flex items-baseline justify-between border-b px-5 py-3">
+              <p className="text-xs font-semibold uppercase tracking-wider text-foreground">
+                Our Solutions
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Built for alternative asset managers
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-1 p-2">
               {SOLUTIONS_MENU.map((item) => (
-                <MenuItem
-                  key={item.label}
-                  item={item}
-                  onSelect={() => setIsOpen(false)}
-                />
+                <SolutionCard key={item.label} item={item} onSelect={close} />
               ))}
+            </div>
+
+            <div className="flex items-center justify-between gap-4 border-t bg-muted/40 px-5 py-3">
+              <p className="text-xs text-muted-foreground">
+                Not sure which solution fits your firm?
+              </p>
+              <Link
+                href="/contact/"
+                onClick={close}
+                className="group inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline focus-visible:underline focus-visible:outline-none"
+              >
+                Book a demo
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </div>
           </div>
         </div>
@@ -217,14 +270,36 @@ export function MobileSolutionsMenu({ onNavigate }: { onNavigate?: () => void })
       >
         Solutions
       </span>
-      <div className="ml-1 flex flex-col gap-1 border-l border-border pl-3">
+      <div className="flex flex-col gap-1 rounded-lg border bg-muted/30 p-1.5">
         {SOLUTIONS_MENU.map((item) => (
-          <MenuItem
+          <ItemLink
             key={item.label}
             item={item}
-            compact
             onSelect={onNavigate}
-          />
+            className={cn(
+              "group flex items-center gap-3 rounded-md px-2.5 py-2.5 transition-colors",
+              item.comingSoon
+                ? "cursor-default"
+                : "hover:bg-background focus-visible:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            )}
+          >
+            <ItemIcon item={item} size="sm" />
+            <span className="min-w-0 flex-1">
+              <span className="flex items-center gap-2 text-sm font-medium text-foreground">
+                <span className="truncate">{item.label}</span>
+                {item.comingSoon && <SoonBadge />}
+              </span>
+              <span className="block truncate text-xs text-muted-foreground">
+                {item.description}
+              </span>
+            </span>
+            {!item.comingSoon &&
+              (item.external ? (
+                <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground" />
+              ) : (
+                <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
+              ))}
+          </ItemLink>
         ))}
       </div>
     </div>

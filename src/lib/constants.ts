@@ -42,6 +42,7 @@ export const NAV_LINKS = [
 export type SolutionsMenuItem = {
   label: string;
   description: string;
+  actionLabel: string;
   icon: LucideIcon;
   href?: string;
   external?: boolean;
@@ -52,20 +53,24 @@ export type SolutionsMenuItem = {
 export const SOLUTIONS_MENU: SolutionsMenuItem[] = [
   {
     label: 'Modern Central UI for Enterprise',
-    description: 'Data Hub: one interface across all your data sources.',
+    description:
+      'Data Hub: one API-driven interface that connects Snowflake, SQL and any API.',
+    actionLabel: 'Explore solution',
     icon: LayoutDashboard,
     href: '/solutions/',
   },
   {
     label: 'DA ONE',
-    description: 'Explore DA ONE on dalabs.ai.',
+    description: 'Our platform at DA Labs. Opens dalabs.ai in a new tab.',
+    actionLabel: 'Visit dalabs.ai',
     icon: Layers,
     href: 'https://dalabs.ai/',
     external: true,
   },
   {
     label: 'Dynamic Agents',
-    description: 'Coming soon.',
+    description: 'Launching soon. Contact us for early access.',
+    actionLabel: 'Coming soon',
     icon: Bot,
     comingSoon: true,
   },
