@@ -9,8 +9,14 @@ import type { LucideIcon } from 'lucide-react';
 import { serviceIcons } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import { FundRibbon } from '@/components/fund-ribbon';
+
+export const metadata: Metadata = {
+  title: servicesData.seo.title,
+  description: servicesData.seo.description,
+};
 
 const toAnchorId = (value: string) =>
   value
@@ -26,7 +32,7 @@ export default function ServicesPage() {
     <div className="container py-24 sm:py-32">
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-          Our Services
+          Financial Technology &amp; Data Services
         </h1>
         <p className="mt-6 text-xl text-muted-foreground">
           {intro}
@@ -36,7 +42,7 @@ export default function ServicesPage() {
       {/* Tech Services Section */}
        <section id="tech-services" className="mb-24">
         <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl fontheadline">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
                 {techServices.title}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -58,7 +64,7 @@ export default function ServicesPage() {
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                   )}
-                  <CardTitle className="text-2xl font-headline">
+                  <CardTitle role="heading" aria-level={3} className="text-2xl font-headline">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
@@ -93,7 +99,7 @@ export default function ServicesPage() {
                   className="scroll-mt-28 bg-card transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 flex flex-col"
                 >
                   <CardHeader>
-                    <CardTitle className="text-xl font-headline flex items-center gap-3">
+                    <CardTitle role="heading" aria-level={3} className="text-xl font-headline flex items-center gap-3">
                        {Icon && (
                           <div className="bg-primary/10 p-2 rounded-full">
                             <Icon className="h-6 w-6 text-primary" />

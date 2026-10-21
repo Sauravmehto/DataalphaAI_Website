@@ -12,6 +12,7 @@ export type BlogPostMeta = {
   date: string;
   excerpt: string;
   author: string;
+  category: string;
   image: string;
   published: boolean;
 };
@@ -39,6 +40,7 @@ function parseFrontmatter(fileName: string): { slug: string; meta: BlogPostMeta;
     date: (data.date as string) ?? new Date().toISOString(),
     excerpt: (data.excerpt as string) ?? "",
     author: (data.author as string) ?? "DataAlpha Team",
+    category: (data.category as string) ?? "Insights",
     image: (data.image as string) ?? "https://picsum.photos/800/450",
     published: data.published !== false,
   };

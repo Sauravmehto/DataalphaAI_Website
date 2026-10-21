@@ -18,14 +18,19 @@ const technologies = [
   { name: 'Docker', logo: '/tech/docker.svg' },
 ];
 
-const TechIcon = ({ name, logo }: { name: string; logo: string }) => (
-  <div className="flex-shrink-0 w-32 flex justify-center items-center px-4 h-12">
+const TechIcon = ({ name, logo, hidden }: { name: string; logo: string; hidden: boolean }) => (
+  <div
+    className="flex-shrink-0 w-28 md:w-32 flex justify-center items-center px-4 h-10 md:h-12"
+    aria-hidden={hidden}
+  >
     <div className="relative w-full h-full">
-        <Image 
-            src={logo} 
-            alt={name}
-            layout="fill"
-            objectFit="contain"
+        <Image
+            src={logo}
+            alt={hidden ? '' : name}
+            title={name}
+            fill
+            sizes="128px"
+            className="object-contain"
             unoptimized
         />
     </div>
@@ -36,11 +41,17 @@ export function TechRibbon() {
   const extendedTechnologies = [...technologies, ...technologies, ...technologies, ...technologies];
 
   return (
-    <div className="relative w-full overflow-hidden mt-12 [mask-image:_linear_gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <div className="relative w-full overflow-hidden mt-8 md:mt-12 [mask-image:linear-gradient(to_right,transparent_0,black_40px,black_calc(100%-40px),transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)]">
       <div className="py-4 bg-muted/50 dark:bg-white rounded-lg">
-        <div className="flex w-max scroll-animate hover:[animation-play-state:paused]">
+        <div className="flex w-max scroll-animate hover:[animation-play-state:paused] motion-reduce:[animation-play-state:paused]">
           {extendedTechnologies.map((tech, index) => (
-            <TechIcon key={index} name={tech.name} logo={tech.logo} />
+            // Only the first copy is announced; the rest exist for the seamless loop
+            <TechIcon
+              key={index}
+              name={tech.name}
+              logo={tech.logo}
+              hidden={index >= technologies.length}
+            />
           ))}
         </div>
       </div>

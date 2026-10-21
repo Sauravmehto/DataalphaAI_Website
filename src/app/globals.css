@@ -83,7 +83,7 @@
   }
   
   .fund-scroll-animate {
-    animation: fund-scroll 60s linear infinite;
+    animation: fund-scroll 120s linear infinite;
   }
 
   @keyframes fund-scroll {

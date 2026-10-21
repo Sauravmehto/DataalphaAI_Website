@@ -137,9 +137,29 @@ export default function Home() {
       </section>
 
       <section
+        id="tech-ecosystem"
+        className="w-full py-12 md:py-16 lg:py-20 bg-background"
+      >
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
+                Our Technology Ecosystem
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                We build on a foundation of robust, scalable, and
+                enterprise-grade technologies.
+              </p>
+            </div>
+          </div>
+          <TechRibbon />
+        </div>
+      </section>
+
+      <section
         id="who-we-serve"
         ref={expertiseSectionRef}
-        className="w-full py-12 md:py-24 lg:py-32 bg-muted/20"
+        className="w-full py-6 md:py-8 lg:py-10 bg-muted/20"
       >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -272,26 +292,6 @@ export default function Home() {
                   </div>
               </Card>
           </div>
-        </div>
-      </section>
-
-      <section
-        id="tech-ecosystem"
-        className="w-full py-12 md:py-24 lg:py-32 bg-muted/20"
-      >
-        <div className="container px-4 md-px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-                Our Technology Ecosystem
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We build on a foundation of robust, scalable, and
-                enterprise-grade technologies.
-              </p>
-            </div>
-          </div>
-          <TechRibbon />
         </div>
       </section>
 
