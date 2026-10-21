@@ -4,6 +4,7 @@ slug: "from-strategy-to-scale-financial-technology-transformation"
 date: "2026-08-04"
 excerpt: "Alternative asset managers need the right strategy, disciplined execution, and specialist capacity — not more technology for technology's sake. How DataAlpha delivers through Partnerships, Implementation, and Staff Augmentation."
 author: "DataAlpha"
+category: "Technology Strategy"
 image: "/blog/from-strategy-to-scale-financial-technology-transformation.png"
 published: true
 ---

@@ -4,6 +4,7 @@ slug: "turning-data-into-investment-intelligence"
 date: "2026-07-22"
 excerpt: "Greater data volume does not automatically create better decisions. The real challenge is converting fragmented information into trusted, timely, decision-ready intelligence."
 author: "From the Desk of the CEO, DataAlpha"
+category: "AI & Data"
 image: "/blog/turning-data-into-investment-intelligence.png"
 published: true
 ---

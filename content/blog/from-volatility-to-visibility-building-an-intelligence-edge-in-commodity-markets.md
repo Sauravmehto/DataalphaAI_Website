@@ -4,6 +4,7 @@ slug: "from-volatility-to-visibility-building-an-intelligence-edge-in-commodity-
 date: "2026-08-25"
 excerpt: "Commodity-focused firms need to connect market, portfolio, operational and risk data quickly enough to understand what changed, why it matters and what action is required."
 author: "From the Desk of the CEO, DataAlpha"
+category: "Commodities"
 image: "/blog/From Volatility.png"
 published: true
 ---

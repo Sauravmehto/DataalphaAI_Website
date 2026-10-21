@@ -4,6 +4,7 @@ slug: "context-layering-why-llms-alone-dont-deliver-roi"
 date: "2026-08-13"
 excerpt: "LLMs alone do not create ROI. Intelligence without context does not consistently produce outcomes — especially in alternative investments."
 author: "From the Desk of the CEO, DataAlpha"
+category: "AI & Data"
 image: "/blog/context-layering-why-llms-alone-dont-deliver-roi.png"
 published: true
 ---

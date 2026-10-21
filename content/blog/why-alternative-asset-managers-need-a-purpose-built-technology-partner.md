@@ -4,6 +4,7 @@ slug: "why-alternative-asset-managers-need-a-purpose-built-technology-partner"
 date: "2026-07-28"
 excerpt: "The problem is not always a lack of software. More often, alternative asset technology has not been designed around the firm's investment process, operating model, and governance."
 author: "From the Desk of the CEO, DataAlpha"
+category: "Technology Strategy"
 image: "/blog/why-alternative-asset-managers-need-a-purpose-built-technology-partner.png"
 published: true
 ---

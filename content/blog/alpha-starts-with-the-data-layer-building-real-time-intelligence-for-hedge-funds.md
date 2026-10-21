@@ -4,6 +4,7 @@ slug: "alpha-starts-with-the-data-layer-building-real-time-intelligence-for-hedg
 date: "2026-09-01"
 excerpt: "Hedge funds need more than abundant information. They need a connected data, AI, quant and financial applications foundation that turns fragmented information into timely, decision-ready intelligence."
 author: "From the Desk of the CEO, DataAlpha"
+category: "Hedge Funds"
 image: "/blog/Alpha Start with the data layer.png"
 published: true
 ---

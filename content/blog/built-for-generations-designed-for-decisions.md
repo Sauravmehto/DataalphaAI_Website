@@ -4,6 +4,7 @@ slug: "built-for-generations-designed-for-decisions"
 date: "2026-08-11"
 excerpt: "Family offices need more than another reporting tool — they need connected software that brings data, intelligence, analytics and workflows together around how they invest, govern and operate."
 author: "From the Desk of the CEO, DataAlpha"
+category: "Family Offices"
 image: "/blog/built-for-generations-designed-for-decisions.png"
 published: true
 ---

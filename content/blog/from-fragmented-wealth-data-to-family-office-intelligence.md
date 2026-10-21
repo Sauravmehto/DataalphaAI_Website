@@ -4,6 +4,7 @@ slug: "from-fragmented-wealth-data-to-family-office-intelligence"
 date: "2026-08-06"
 excerpt: "Family offices don't lack data — they lack one trusted view of exposure, liquidity, performance, and risk. Here's how to build clarity across the portfolio."
 author: "From the Desk of the CEO, DataAlpha"
+category: "Family Offices"
 image: "/blog/from-fragmented-wealth-data-to-family-office-intelligence.png"
 published: true
 ---
