@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { ScrollToTop } from '@/components/layout/scroll-to-top';
 import Script from 'next/script';
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from '@/lib/seo';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -15,9 +16,24 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'DataAlpha AI',
   description:
     'Front, Middle and Back-office AI-Powered solutions for tomorrow\'s financial institutions.',
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    images: [DEFAULT_OG_IMAGE],
+  },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  sameAs: ['https://www.linkedin.com/company/dataalpha-ai'],
 };
 
 export default function RootLayout({
@@ -33,6 +49,10 @@ export default function RootLayout({
           spaceGrotesk.variable
         )}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-TY5S87067L"

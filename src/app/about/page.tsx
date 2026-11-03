@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
+import { SectionHeader } from "@/components/sections/section-header";
+import { FeatureCard } from "@/components/sections/feature-card";
 import Link from "next/link";
 import {
   Linkedin,
@@ -12,12 +14,13 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About DataAlpha | Financial Technology & AI",
-  description:
-    "Learn how DataAlpha helps alternative investment managers modernize financial data, AI, analytics, and investment technology.",
-};
+const title = "About DataAlpha | Financial Technology & AI";
+const description =
+  "Learn how DataAlpha helps alternative investment managers modernize financial data, AI, analytics, and investment technology.";
+
+export const metadata: Metadata = pageMetadata({ title, description, path: "/about/" });
 
 const leadershipTeam = [
   {
@@ -99,25 +102,25 @@ const values = [
     icon: Users,
     title: "Community",
     description:
-      "We build lasting partnerships with clients and colleagues through collaboration, shared goals, and long-term thinking.",
+      "We share knowledge across teams, collaborate directly with clients, and build relationships around practical problem-solving. We bring business and technology perspectives together when we define and deliver solutions.",
   },
   {
     icon: Handshake,
     title: "Trust",
     description:
-      "We earn client trust by understanding their challenges in depth, communicating clearly, and taking ownership of delivery.",
+      "We clarify requirements, communicate progress and trade-offs, and align each solution with the client’s investment and operational processes. We make responsibilities and decisions transparent throughout delivery.",
   },
   {
     icon: Lightbulb,
     title: "Meritocracy",
     description:
-      "We encourage open discussion and bottom-up ideas, and let the strongest idea win, wherever it comes from.",
+      "We evaluate ideas on their merits, invite technical and business feedback, and choose approaches that address the problem at hand. We encourage open discussion and continuous improvement.",
   },
   {
     icon: Shield,
     title: "Integrity",
     description:
-      "We act honestly, learn from our mistakes, and keep improving as individuals and as a company.",
+      "We communicate clearly about scope, assumptions, and limitations. We document decisions, address issues directly, and apply consistent standards to the work we deliver.",
   },
 ];
 
@@ -128,30 +131,32 @@ export default function AboutPage() {
         <p className="text-3xl font-bold tracking-tighter text-primary mb-4 font-headline">
           About DataAlpha
         </p>
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-          Turning Financial Data into Alpha
+        <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
+          We Help Generate Alpha by Leveraging Your Data
         </h1>
       </section>
 
       <section className="container max-w-3xl mx-auto mb-16">
-        <div className="space-y-5 text-lg text-center">
+        <div className="space-y-5 text-lg leading-relaxed text-center">
           <p className="text-foreground">
-            DataAlpha helps alternative investment managers turn financial data
-            into actionable intelligence through modern data engineering, AI,
-            analytics, and financial technology.
+            At DataAlpha, we turn financial data into usable intelligence for
+            alternative asset managers. We provide financial technology
+            consulting, fintech AI, and quantitative analytics solutions that
+            connect investment information with the decisions and workflows
+            teams manage every day.
           </p>
           <p className="text-muted-foreground">
-            We work with hedge funds, private equity, private credit, real
-            estate, and other alternative investment managers. Our teams build
-            data platforms, analytics solutions, AI applications, and investment
-            technology that give firms clearer visibility into their portfolios,
-            more efficient workflows, and stronger risk analysis.
+            We build financial data management platforms, implement AI
+            automation, develop analytical models, and deliver investment
+            management software development services. We address specific tasks
+            such as consolidating positions, checking data quality, evaluating
+            portfolio risk, and automating trade and investor reporting.
           </p>
           <p className="text-muted-foreground">
-            We pair financial domain expertise with hands-on technology
-            delivery, working alongside each client&apos;s team from design
-            through implementation so they can make better-informed investment
-            decisions.
+            We combine financial-domain knowledge with fintech solutions to help
+            investment firms modernize research, operations, and oversight. We
+            focus on systems and workflows that teams use to access data,
+            evaluate investments, and manage portfolios.
           </p>
         </div>
       </section>
@@ -218,37 +223,20 @@ export default function AboutPage() {
 
       <section className="bg-muted/30 py-24">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-              Our Values
-            </h2>
-            <p className="mt-6 text-xl text-muted-foreground">
-              Our values shape our culture and guide every decision we make.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {values.map((value) => {
-              const Icon = value.icon;
-              return (
-                <Card
-                  key={value.title}
-                  className="bg-card transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
-                >
-                  <CardHeader className="flex flex-row items-center gap-4 pb-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle role="heading" aria-level={3} className="text-2xl font-headline">
-                      {value.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{value.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <SectionHeader
+            title="Our Values"
+            description="We work with clients through collaboration, trust, meritocracy, and integrity. These values shape how we build technology, communicate decisions, and support long-term partnerships."
+            className="max-w-3xl"
+          />
+          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+            {values.map((value) => (
+              <FeatureCard
+                key={value.title}
+                icon={value.icon}
+                title={value.title}
+                description={value.description}
+              />
+            ))}
           </div>
         </div>
       </section>

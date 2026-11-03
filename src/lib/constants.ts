@@ -1,4 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
+import { dataHub } from '@/content/solutions-content';
 import {
   BarChart,
   Briefcase,
@@ -92,13 +93,11 @@ export const solutionIcons: {[key:string]: LucideIcon} = {
 
 export const solutions: Solution[] = [
   {
-    title: 'Data Hub - Modern Central UI for Enterprise',
+    title: `${dataHub.title} | ${dataHub.tagline}`,
     slug: 'data-hub',
     icon: 'data-hub',
-    shortDescription:
-      'Data Hub is API based UX build natively for asset managers; it connects to any API or database (Snowflake, SQL).',
-    longDescription:
-      'Data Hub provides a modern, centralized user interface built natively for asset managers. It seamlessly connects to any API or database, including Snowflake and SQL, to unify your data streams. This creates a single point of access for all your enterprise data, enabling streamlined workflows, enhanced data visualization, and more powerful analytics. Empower your teams with a consistent and intuitive experience for interacting with complex financial data.',
+    shortDescription: dataHub.summary,
+    longDescription: dataHub.description,
   }
 ];
 

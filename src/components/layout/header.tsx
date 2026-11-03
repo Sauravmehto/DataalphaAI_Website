@@ -23,12 +23,6 @@ type SearchItem = {
   keywords: string[];
 };
 
-const toAnchorId = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-
 const SEARCH_ITEMS: SearchItem[] = [
   ...NAV_LINKS.map((link) => ({
     href: link.href,
@@ -86,13 +80,13 @@ const SEARCH_ITEMS: SearchItem[] = [
     ],
   })),
   ...servicesContent.fundsServices.items.map((item) => ({
-    href: `/services#fund-${toAnchorId(item.title)}`,
+    href: `/services#fund-${item.anchorId}`,
     label: `Client Focus - ${item.title}`,
     description: item.description,
     keywords: [item.title, item.description],
   })),
   ...servicesContent.techServices.items.map((item) => ({
-    href: `/services#tech-${toAnchorId(item.title)}`,
+    href: `/services#tech-${item.anchorId}`,
     label: `Tech Service - ${item.title}`,
     description: item.description,
     keywords: [item.title, item.description],

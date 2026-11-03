@@ -1,9 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import servicesData from '@/content/services-content.json';
 import type { LucideIcon } from 'lucide-react';
 import { serviceIcons } from '@/lib/constants';
@@ -12,127 +6,87 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import { FundRibbon } from '@/components/fund-ribbon';
+import { SectionHeader } from '@/components/sections/section-header';
+import { FeatureCard } from '@/components/sections/feature-card';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: servicesData.seo.title,
   description: servicesData.seo.description,
-};
+  path: '/services/',
+});
 
-const toAnchorId = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-
+const iconFor = (key: string) =>
+  serviceIcons[key as keyof typeof serviceIcons] as LucideIcon | undefined;
 
 export default function ServicesPage() {
   const { intro, fundsServices, techServices, cta } = servicesData;
 
   return (
     <div className="container py-24 sm:py-32">
-      <div className="max-w-4xl mx-auto text-center mb-16">
+      <div className="mx-auto mb-20 max-w-4xl text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-          Financial Technology &amp; Data Services
+          Our Services
         </h1>
-        <p className="mt-6 text-xl text-muted-foreground">
+        <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
           {intro}
         </p>
       </div>
-      
-      {/* Tech Services Section */}
-       <section id="tech-services" className="mb-24">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-                {techServices.title}
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-                {techServices.description}
-            </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {techServices.items.map((service) => {
-            const Icon = serviceIcons[service.icon as keyof typeof serviceIcons] as LucideIcon | undefined;
-            return (
-              <Card
-                key={service.title}
-                id={`tech-${toAnchorId(service.title)}`}
-                className="scroll-mt-28 bg-muted/30 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 flex flex-col"
-              >
-                <CardHeader className="flex flex-row items-center gap-4 pb-4">
-                  {Icon && (
-                    <div className="bg-primary/10 p-3 rounded-full">
-                      <Icon className="h-8 w-8 text-primary" />
-                    </div>
-                  )}
-                  <CardTitle role="heading" aria-level={3} className="text-2xl font-headline">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
+
+      <section id="tech-services" className="mb-24 scroll-mt-28">
+        <SectionHeader
+          title={techServices.title}
+          description={techServices.description}
+          className="max-w-4xl"
+        />
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+          {techServices.items.map((service) => (
+            <FeatureCard
+              key={service.anchorId}
+              id={`tech-${service.anchorId}`}
+              icon={iconFor(service.icon)}
+              title={service.title}
+              description={service.description}
+              className="bg-muted/30"
+            />
+          ))}
         </div>
       </section>
 
-      
-      {/* Funds Services Section */}
-      <section id="funds-services" className="mb-24">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-                {fundsServices.title}
-            </h2>
-             <p className="mt-4 text-lg text-muted-foreground">
-                {fundsServices.description}
-            </p>
-        </div>
+      <section id="funds-services" className="mb-24 scroll-mt-28">
+        <SectionHeader
+          title={fundsServices.title}
+          description={fundsServices.description || undefined}
+          className="mb-4"
+        />
         <FundRibbon />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {fundsServices.items.map((service) => {
-              const Icon = serviceIcons[service.icon as keyof typeof serviceIcons] as LucideIcon | undefined;
-              return (
-                <Card
-                  key={service.title}
-                  id={`fund-${toAnchorId(service.title)}`}
-                  className="scroll-mt-28 bg-card transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 flex flex-col"
-                >
-                  <CardHeader>
-                    <CardTitle role="heading" aria-level={3} className="text-xl font-headline flex items-center gap-3">
-                       {Icon && (
-                          <div className="bg-primary/10 p-2 rounded-full">
-                            <Icon className="h-6 w-6 text-primary" />
-                          </div>
-                        )}
-
-                    {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {fundsServices.items.map((service) => (
+            <FeatureCard
+              key={service.anchorId}
+              id={`fund-${service.anchorId}`}
+              icon={iconFor(service.icon)}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="text-center py-16 bg-muted/30 rounded-lg">
-          <div className="container">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline mb-4">
-                  {cta.title}
-              </h2>
-              <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-8">
-                  {cta.subtitle}
-              </p>
-              <Button asChild size="lg">
-                  <Link href="/contact">
-                      {cta.buttonText} <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-              </Button>
-          </div>
+      <section className="rounded-2xl bg-muted/30 py-16 text-center">
+        <div className="container">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
+            {cta.title}
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
+            {cta.subtitle}
+          </p>
+          <Button asChild size="lg">
+            <Link href="/contact">
+              {cta.buttonText} <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
       </section>
     </div>
   );

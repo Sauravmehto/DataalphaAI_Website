@@ -35,6 +35,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { useState, useRef } from 'react';
+import { dataHub, functionGroups } from '@/content/solutions-content';
 
 const serviceIcons: { [key: string]: React.ElementType } = {
   DatabaseZap,
@@ -44,50 +45,7 @@ const serviceIcons: { [key: string]: React.ElementType } = {
 };
 
 
-const newFunctionGroups = [
-  {
-    name: 'Pre-Trade',
-    functions: ['Deal Screening', 'Portfolio Optimization', 'Asset Allocation'],
-  },
-  {
-    name: 'Trading',
-    functions: [
-      'Order Management',
-      'Portfolio Management',
-      'Client Relationship Management',
-    ],
-  },
-  {
-    name: 'Post-Trade',
-    functions: [
-      'Trade Settlement',
-      'Market Data',
-      'Asset Servicing',
-      'Reconciliation',
-      'Cash Management',
-      'Treasury',
-    ],
-  },
-  {
-    name: 'Transparency',
-    functions: [
-      'Portfolio Control',
-      'Risk Management',
-      'Fund Compliance',
-      'Performance Attribution',
-      'Data Governance',
-      'Investor Reporting',
-    ],
-  },
-  {
-    name: 'Accounting',
-    functions: [
-      'Portfolio Accounting',
-      'Corporate Accounting',
-      'Partner Accounting',
-    ],
-  },
-];
+
 
 export default function Home() {
   const expertiseSectionRef = useRef<HTMLElement>(null);
@@ -222,13 +180,13 @@ export default function Home() {
                           </div>
                           <div>
                             <CardTitle className="text-2xl font-headline">Data Hub</CardTitle>
-                             <p className="text-sm text-muted-foreground">Modern Central UI for Enterprise</p>
+                             <p className="text-sm text-muted-foreground">{dataHub.tagline}</p>
                           </div>
                       </div>
                   </CardHeader>
                   <CardContent className="flex-grow space-y-6">
                       <p className="text-muted-foreground">
-                        Data Hub is API based UX build natively for asset managers; it connects to any API or database (Snowflake, SQL).
+                        {dataHub.summary}
                       </p>
                       <div>
                           <h4 className="font-semibold text-foreground mb-3">Key Features</h4>
@@ -266,17 +224,17 @@ export default function Home() {
                         className="w-full"
                         onValueChange={setOpenAccordionItem}
                       >
-                          {newFunctionGroups.map((group) => (
-                            <AccordionItem value={group.name} key={group.name}>
+                          {functionGroups.map((group) => (
+                            <AccordionItem value={group.shortName} key={group.id}>
                                 <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                                   <div className='flex justify-between w-full items-center'>
-                                    <span>{group.name}</span>
-                                    {openAccordionItem === group.name ? <ChevronsUp /> : <ChevronsDown />}
+                                    <span>{group.shortName}</span>
+                                    {openAccordionItem === group.shortName ? <ChevronsUp /> : <ChevronsDown />}
                                   </div>
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-1 list-disc pl-5 text-muted-foreground">
-                                        {group.functions.map(f => <li key={f}>{f}</li>)}
+                                        {group.functions.map((f) => <li key={f.title}>{f.title}</li>)}
                                     </ul>
                                 </AccordionContent>
                             </AccordionItem>

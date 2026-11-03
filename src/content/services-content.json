@@ -1,79 +1,92 @@
 {
-  "intro": "We build data, AI, and analytics solutions that help financial firms operate smarter, manage risk, and make better investment decisions.",
+  "intro": "We help alternative asset managers modernize investment operations through financial technology consulting, fintech AI, and quantitative analytics solutions. We connect financial data, automate repeatable workflows, build investment applications, and equip teams with timely portfolio and risk insights.",
   "fundsServices": {
-    "title": "Solutions for Investment Managers",
-    "description": "We help investment managers modernize data, automate workflows, and improve investment analysis across credit, equity, real estate, and digital assets.",
+    "title": "Who We Serve",
+    "description": "",
     "items": [
       {
         "icon": "hedge-fund",
         "title": "Hedge Funds",
-        "description": "Trading data pipelines, alpha research tools, and portfolio analytics that give portfolio managers and risk teams faster, clearer insight."
+        "anchorId": "hedge-funds",
+        "description": "We help hedge funds bring market and position data into real-time pipelines, test investment signals, and monitor exposure and performance. We combine predictive analytics AI with risk dashboards and trading workflows to help teams evaluate strategies and respond to changing positions."
       },
       {
         "icon": "private-credit",
         "title": "Private Credit",
-        "description": "Borrower intelligence, underwriting analytics, and deal workflows that speed up origination and keep portfolio monitoring current."
+        "anchorId": "private-credit",
+        "description": "We help private credit managers organize deal pipelines, review borrower information, compare underwriting assumptions, and track covenants and portfolio performance. We connect documents, financial data, and monitoring dashboards so teams follow each investment from screening through ongoing oversight."
       },
       {
         "icon": "structured-credit",
         "title": "Structured Credit",
-        "description": "Analytics for CLOs, CDOs, ABS, MBS, and other securitized products, from origination and analysis to execution in secondary markets."
+        "anchorId": "structured-credit",
+        "description": "We support structured credit investing across CLOs, CDOs, ABS, and MBS. We organize collateral and cash-flow data, model deal structures, monitor exposure, and support valuation and trade workflows through structured credit solutions."
       },
       {
         "icon": "real-estate",
-        "title": "Real Estate Funds",
-        "description": "Property and market data in one place, with valuation models and dashboards for acquisitions, reporting, and portfolio performance."
+        "title": "Real Estate Investment Trusts",
+        "anchorId": "real-estate-funds",
+        "description": "We connect property-level operating data, valuations, market assumptions, and fund reporting through real estate fund management software. We give investment teams consolidated views of cash flows, asset performance, and valuation scenarios."
       },
       {
         "icon": "private-equity",
         "title": "Private Equity",
-        "description": "Data tools for deal sourcing, due diligence, and portfolio company analytics, with monitoring that carries through to exit."
+        "anchorId": "private-equity",
+        "description": "We help private equity teams centralize deal sourcing, analyze investment and company financials, and monitor portfolio-company performance. We connect pipeline data, valuation models, and operating metrics to support investment committees and ongoing portfolio reviews."
       },
       {
         "icon": "crypto-funds",
         "title": "Crypto Funds",
-        "description": "Blockchain data integration, on-chain analytics, portfolio attribution, and risk monitoring built for institutional crypto managers."
+        "anchorId": "crypto-funds",
+        "description": "We help crypto funds aggregate blockchain and market data, monitor transactions and exposures, and automate portfolio and risk reports. We provide integrated dashboards that give teams a clearer view of holdings, liquidity, and operational exceptions."
       },
       {
         "icon": "insurance",
         "title": "Insurance Funds",
-        "description": "Integrated investment data, automated reporting, and risk analytics that support asset allocation and regulatory requirements."
+        "anchorId": "insurance-funds",
+        "description": "We integrate investment positions, liabilities, and market data for insurance fund teams. We automate recurring reporting and support asset allocation, exposure monitoring, and investment-control workflows."
       },
       {
         "icon": "commodities",
         "title": "Commodities",
-        "description": "Market data and risk analytics across energy, metals, and agriculture, with tools to assess exposure and plan execution."
+        "anchorId": "commodities",
+        "description": "We help energy, metals, and agricultural investment teams consolidate prices, curves, and positions. We build quantitative analytics solutions to analyze exposures, compare scenarios, and support trading and risk decisions."
       },
       {
         "icon": "family-offices",
         "title": "Family Offices",
-        "description": "One consolidated view of investments, with fund allocation, research, market data integration, budgeting, and planning in web-based spreadsheets."
+        "anchorId": "family-offices",
+        "description": "We build web-based spreadsheet and portfolio management tools for family offices and funds of funds. We integrate holdings, transactions, market data, and allocation views so teams track investments, research opportunities, and prepare consolidated reports."
       }
     ]
   },
   "techServices": {
     "title": "Technology Services",
-    "description": "Build a stronger financial data foundation with modern data engineering, AI applications, quantitative analytics, and financial software.",
+    "description": "We design, develop, and integrate technology across financial data management, AI automation, quantitative research, and investment management software development. We connect data sources, implement analytical models, and build applications that support research, trading, monitoring, and reporting.",
     "items": [
       {
         "icon": "data-service",
-        "title": "DATA",
-        "description": "Reliable financial data pipelines, modern warehouses, and integrated market data platforms for accurate, consistent reporting."
+        "title": "Data",
+        "anchorId": "data",
+        "description": "We build data warehouses, connect market, position, transaction, and client data, and establish validation and reconciliation controls. Our financial data management and financial data quality management services give investment teams consistent datasets for analysis, reporting, and daily operations."
       },
       {
         "icon": "ai-service",
-        "title": "AI",
-        "description": "Turn financial data into insight with LLM applications, RAG systems, intelligent automation, and AI-powered reporting."
+        "title": "Artificial Intelligence",
+        "anchorId": "ai",
+        "description": "We implement fintech AI workflows using large language models (LLMs), retrieval-augmented generation (RAG), and multi-agent AI systems. We automate document review, information retrieval, and recurring operational checks; we use predictive analytics tools to surface patterns and support analyst decisions."
       },
       {
         "icon": "quant-service",
-        "title": "QUANT",
-        "description": "Portfolio optimization, backtesting, asset screening, derivative valuation, and quantitative risk models to support investment decisions."
+        "title": "Quant",
+        "anchorId": "quant",
+        "description": "We develop quantitative analytics solutions for portfolio optimization, strategy backtesting, asset screening, risk measurement, and derivatives valuation. We turn market and portfolio data into models and dashboards that help investment teams compare exposures, evaluate scenarios, and monitor results."
       },
       {
         "icon": "finance-apps-service",
-        "title": "FINANCE APPLICATIONS",
-        "description": "Integrated applications for compliance, quoting, trade booking, post-trade operations, and reporting across the front and back office."
+        "title": "Financial Applications",
+        "anchorId": "finance-applications",
+        "description": "We build fintech software solutions for the investment lifecycle, from pre-trade compliance and order management to execution, booking, portfolio management, and investor reporting. We integrate these workflows with financial data sources and controls to reduce duplicate entry and manual handoffs."
       }
     ]
   },
@@ -84,6 +97,6 @@
   },
   "seo": {
     "title": "Financial Data, AI & Analytics Services | DataAlpha",
-    "description": "DataAlpha builds financial data engineering, AI, and quantitative analytics solutions for hedge funds, private credit, private equity, and family offices."
+    "description": "DataAlpha helps alternative asset managers modernize investment operations with financial data management, fintech AI, quant analytics, and investment software."
   }
 }
